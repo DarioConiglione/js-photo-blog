@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400..700&display=swap');
+
+
+header {
+    
+    height: 100px;
+    background-image: url(../img/wall.png);
+    font-family: 'Edu TAS Beginner', sans-serif; 
+
+}
+    
+
+body {
+    height: 100%;
+    background-image: url(../img/cork.png);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#photo {
+    background-color: white;
+    height: 400px;
+    position: relative;
+    box-shadow: 0 10px 8px rgba(0,0,0,0.2);
+}
