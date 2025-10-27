@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sometype+Mono:ital,wght@0,400..700;1,400..700&display=swap');
 
 * {
   margin: 0;
@@ -6,11 +7,28 @@
   box-sizing: border-box;
 }
 
+/* Utilities 
+
+.d-flex {
+    display: flex;
+}
+
+.gap {
+    gap: 2rem;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+*/
+
 header {
     
     height: 100px;
     background-image: url(../img/wall.png);
-    font-family: 'Edu TAS Beginner', sans-serif; 
+    font-family: 'Edu TAS Beginner', sans-serif;
+    font-weight: bolder; 
 
 }
     
@@ -38,7 +56,8 @@ body {
 }
 
 .photo{
-    aspect-ratio: 1 / 1;    
+    aspect-ratio: 1 / 1;   
+     
 }
 
 .photo img {
@@ -49,4 +68,13 @@ body {
 
 .text {
     padding: 0.4rem;
+}
+
+.text p:first-child {
+    font-family: 'Sometype Mono', monospace;
+}
+
+.text p:last-child {
+    font-family: 'Edu TAS Beginner', sans-serif;
+    font-weight: bolder;
 }
