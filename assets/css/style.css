@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400..700&display=swap');
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 header {
     
@@ -11,22 +16,29 @@ header {
     
 
 body {
-    height: 100%;
+    
     background-image: url(../img/cork.png);
     background-size: cover;
-    background-attachment: fixed;
+    
 }
 
 #polaroid {
-    background-color: white;
-    height: 300px;
+    background-color: white;    
     position: relative;
     box-shadow: 0 10px 8px rgba(0,0,0,0.2);
+    padding: 1rem;
+}
+
+.pin{
+    position: absolute;
+    top: 9px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   
 }
 
 .photo{
-    aspect-ratio: 1 / 1;
-    overflow: hidden;
+    aspect-ratio: 1 / 1;    
 }
 
 .photo img {
@@ -35,9 +47,6 @@ body {
     padding: 0.4rem;
 }
 
-.pin{
-    position: absolute;
-    top: -13px;
-    right: 43%;
-    size: 2px;
+.text {
+    padding: 0.4rem;
 }
