@@ -16,7 +16,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/style.css">
 
-     <!-- Axios CDN -->
+    <!-- Axios CDN -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 
@@ -26,23 +26,23 @@
 
 
     <header class="d-flex justify-content-center align-center">
-      
-        
-      <h1 class="py-5">Estate '24</h1>
 
-    
-       
+
+        <h1 class="py-5">Estate '24</h1>
+
+
+
     </header>
 
     <main>
-        
+
 
 
         <div class="container">
 
-            <section class="row gap-2 m-5 justify-content-evenly">
+            <section class="row gap-2 m-5 justify-content-evenly" id="sec">
 
-            <div class="col-sm-12 col-md-5 col-lg-3 mb-2 polaroid">
+                <!-- <div class="col-sm-12 col-md-5 col-lg-3 mb-2 polaroid">
 
                 <div class="pin">
                     <img src="./assets/img/pin.svg" alt="">
@@ -142,9 +142,14 @@
                     <p>Prova2</p>
                 </div>
 
-            </div>           
+            </div>     -->
 
-            </section>        
+            </section>
+
+            <div id="overlay">
+                <img id="overlay-img" src="" />
+                <button id="close-btn">Chiudi</button>
+            </div>
 
         </div>
 
@@ -165,7 +170,7 @@
     <!-- JavaScript -->
     <script src="./assets/js/script.js"></script>
 
-   
+
 
 </body>
 
