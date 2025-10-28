@@ -9,10 +9,10 @@ axios.get('https://lanciweb.github.io/demo/api/pictures/')
 
 
             if (arrayEl.length === 6) {
-                
-                
+
+
                 for (let i = 0; i < arrayEl.length; i++) {
-                                        
+
                     const elementEl = document.createElement("div");
                     elementEl.classList.add("col-sm-12", "col-md-5", "col-lg-3", "mb-2", "polaroid")
 
@@ -31,24 +31,46 @@ axios.get('https://lanciweb.github.io/demo/api/pictures/')
                                                 <p>${arrayEl[i].title}</p>
                                             </div>
                                             `
-                    
+
 
                     secEl.appendChild(elementEl);
 
                     elementEl.addEventListener("click", funOverlay)
                     
 
-                }
+
+                    function funOverlay() {
+                        overlayEL.classList.replace("none", "d-block")
+                        const immagine = document.createElement("img")
+                        immagine.src = arrayEl[i].url;
+                        immagine.width = 500;
+                        overlayImgEl.appendChild(immagine)
+                        overlayImgEl.classList.add("d-block")
+
+                    }
+                    btnEl.addEventListener("click", () => {
+                        overlayEL.classList.replace("d-block", "none");
+                        overlayImgEl.innerHTML = "";
+                    });
+
+                }           
+
 
 
             }
-
-
+            
         });
+               
+        
     })
+    
     .catch(error => {
         console.error(error)
     })
+
+
+
+
 
 const arrayEl = [];
 
@@ -58,16 +80,15 @@ const overlayEL = document.getElementById("overlay")
 
 const overlayImgEl = document.getElementById("overlay-img")
 
-function funOverlay() {
-    overlayEL.classList.replace("none", "block")
-    overlayImgEl.classList.add("block")  
 
-}
+const btnEl = document.getElementById("close-btn")
+
+
 
 
 
 // aggiungo un addEventListener ad elementEL
-// la funzione delle evento deve rendere l'overlay block ed appendere l'immagine ad overlay-img 
+// la funzione delle evento deve rendere l'overlay block ed appendere l'immagine ad overlay-img
 // aggiungere un addEventListener al elemento bottone per tornare indietro.
 
 
