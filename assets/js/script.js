@@ -31,8 +31,12 @@ axios.get('https://lanciweb.github.io/demo/api/pictures/')
                                                 <p>${arrayEl[i].title}</p>
                                             </div>
                                             `
+                    
 
                     secEl.appendChild(elementEl);
+
+                    elementEl.addEventListener("click", funOverlay)
+                    
 
                 }
 
@@ -50,11 +54,18 @@ const arrayEl = [];
 
 const secEl = document.getElementById("sec");
 
-const overlayEL = getElementById("overlay")
+const overlayEL = document.getElementById("overlay")
+
+const overlayImgEl = document.getElementById("overlay-img")
+
+function funOverlay() {
+    overlayEL.classList.replace("none", "block")
+    overlayImgEl.classList.add("block")  
+
+}
 
 
 
-// generare un ciclo for per tutta l'array di oggetti
 // aggiungo un addEventListener ad elementEL
 // la funzione delle evento deve rendere l'overlay block ed appendere l'immagine ad overlay-img 
 // aggiungere un addEventListener al elemento bottone per tornare indietro.
